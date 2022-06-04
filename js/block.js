@@ -1,0 +1,4 @@
+var  minutes, seconds;var countdown ="";var x ="";var counterd=0;
+function getCountdown(){var  seconds_left = 60-counterd; minutes = pad( parseInt(seconds_left / 60) ); seconds = pad( parseInt(seconds_left % 60 ) ); countdown.innerHTML = '<span>' + minutes + '</span><span>' + seconds + '</span>'; if (seconds_left < 1) { clearInterval(x);  countdown.innerHTML = '<span>' + '00' + '</span><span>' + '00' + '</span>';document.getElementById('block').style.display=('none');setCookie('tr','0',20); } counterd=counterd+1;return counterd;}
+function pad(n) {return (n < 10 ? '0' : '') + n;} 
+function blockscr() {document.getElementById('block').style.display=('');countdown = document.getElementById('tiles');document.getElementById('conterd').style.visibility = 'visible';getCountdown();x=setInterval(function () {if (getCountdown()<2) {x.stope()}; }, 1000); }

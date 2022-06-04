@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تسجيل الدخول</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-khaki.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+</style>
+</head>
+<body class="backgrd" >
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block osama-minu-w3-sidebar" style="display:none;z-index:5" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-xxlarge" onclick="w3_close()">Close &times;</button>
+  <a href="login.html" class="w3-bar-item w3-button osama-w3-bar-item">دخول الطلاب</a>
+  <a href="signup.html" class="w3-bar-item w3-button osama-w3-bar-item">انشاء حساب</a>
+  <a href="about.html" class="w3-bar-item w3-button osama-w3-bar-item">عن البرنامج</a>
+</div>
+
+<div class="osama-minu ">
+ <button class="w3-button  w3-xlarge " style="color: white;background-color: rgb(205 91 21 / 64%);margin-top: 6px;margin-right: 7px;" onclick="w3_open()">&#9776;</button>
+</div>
+ 
+<!-- Page Content -->
+<div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<div>
+  <div class="w3-container">
+           
+
+<form action="/action_page.php" method="post">
+  <div class="imgcontainer">
+    <img src="img/student.jpeg" alt="Avatar" class="avatar">
+	<h1>جامعتي</h1>
+  </div>
+
+
+  <div class="container">
+    <input type="text" placeholder="اسم المستخدم" name="uname" required>
+    <input type="password" placeholder="كلمة السر" name="psw" required>
+    <button type="submit">تسجيل الدخول</button>
+  </div>
+
+
+</form>
+
+
+<br>
+
+
+ </div>
+</div>
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+// Accordion
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-theme-d1";
+  } else { 
+    x.className = x.className.replace("w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+  }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

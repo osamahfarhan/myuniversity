@@ -1,0 +1,1 @@
+function dname(n,id) {$.ajax({ url: n , datatype: "json", success: function(data) { var mid = data; if( mid.length > 0 ) {document.getElementById(id).innerHTML=mid; }}, error: function(XMLHttpRequest, textStatus, errorThrown) { console.error("Status: " + textStatus + " request: " + XMLHttpRequest); console.error("Error: " + errorThrown); } });}

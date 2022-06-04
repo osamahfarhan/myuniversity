@@ -1,0 +1,5 @@
+function setCookie(n,c,e) { var d = new Date(); d.setTime(d.getTime() + (e*24*60*60*1000)); var expires = "expires=" + d.toGMTString(); document.cookie = n + "=" + c + ";" + expires + ";path=/"; } 
+function getCookie(cname) { var name = cname + "="; var decodedCookie = decodeURIComponent(document.cookie); var ca = decodedCookie.split(';'); for(var i = 0; i < ca.length; i++) { var c = ca[i]; while (c.charAt(0) == ' ') { c = c.substring(1); } if (c.indexOf(name) == 0) { return c.substring(name.length, c.length); } } return ""; } 
+function SaveU(u,p,c) {if (c==true) {setCookie('T','/login?username='+u+'&password='+p,20);}}
+function loginD (u) {if (u.indexOf("password=")>1) {setCookie('T',u,20);window.location='/lv'+u;}}
+function tr(u){if(u=='') return '0';else if(u==null) return '0';else if(u=='0') return '1';else if(u=='1') return '2';else if(u=='2') return '3';else if(u=='3') return '4';else if(u=='4') return '5';else if(u=='5') return '6';else if(u=='6') return '7';else if(u=='7') return '8';else if(u=='8') return '9';else if(u=='9') return '10';else if(u=='10') return '11';else '0';}
